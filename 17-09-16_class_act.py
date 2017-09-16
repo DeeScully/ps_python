@@ -45,3 +45,27 @@ def print_same():
 greater(4, 5)
 greater(5, 4)
 greater(5, 5)
+
+"""
+install python
+install atom
+install git
+set-up github
+clone github repo
+print function
+strings
+integers
+floats
+argv method
+import module
+variables
+string formatting
+str.format method
+define functions
+pararmetres
+function call
+arguments
+function return values
+booleans
+conditionals 
+"""
