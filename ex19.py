@@ -1,6 +1,6 @@
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
     """
-    str > none
+    str, str > None
     input 2 str and call print w/str formatting to print input strings
     """
     print(f"You have {cheese_count} cheeses!")
