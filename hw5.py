@@ -280,7 +280,7 @@ def letter_printer():
         print(ltr)
         sleep(.3)
 
-letter_printer()
+#letter_printer()
 
 #print(secs(42, 42))
 #print(miles(10))
@@ -300,3 +300,4 @@ letter_printer()
 #countdown(20)
 #odd_even()
 #print(length())
+#letter_printer()
