@@ -168,10 +168,14 @@ def three_inputs():
     """
     assign 3 inputs to vars and pass it to triangle_chk call
     """
-    length1 = float(input('What is the 1st length : '))
-    length2 = float(input('What is the 2nd length : '))
-    length3 = float(input('What is the 3rd length : '))
+    length_1, length_2, length_3 = input('Type in the lengths of the three sides of your hypothetical triange - separate the numbers with a space. > ')
 
-    triangle_chk(length1, length2, length3)
+    try:
+        s1, s2, s3 = int(length_1, length_2, length_3)
+        assert s1 > 0 and s2 > 0 and s3 > 0
+    except:
+        print('Please only input positive integers.  Please try again. \n')
+        three_inputs()
+    triangle_chk(s1, s2, s3)
 
 three_inputs()
