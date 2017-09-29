@@ -10,7 +10,9 @@ print(list_3)
 # create a dict wtih 3 k-v pairs, loop and print each k-v pair, chk if a given val is in dict
 
 char_1 = {'Name' : 'Luke', 'Power' : 'Force', 'Master' : 'Yoda'}
-vals = []
-for k, v in char_1:
+
+for k, v in char_1.items():
     print(f'Key is {k} and value is {v}.')
-    vals.append(v)
+
+Luke = 'Luke' in char_1.values()
+print(f'Luke is a value in char_1: {Luke}.' )
