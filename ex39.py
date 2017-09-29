@@ -1,4 +1,5 @@
 # create a mapping of state to abbreviation
+# add five k:v pairs of states and abbreviations
 states = {
     'Oregon' : 'OR',
     'Florida' : 'FL',
@@ -8,7 +9,7 @@ states = {
 }
 
 # create a basic set of states and some cities in them
-
+# create a mapping of state abbreviations and a city in that state; add three k:v pairs
 cities = {
     'CA' : 'San Francisco',
     'MI' : 'Detroit',
@@ -16,6 +17,7 @@ cities = {
 }
 
 # add some more cities
+# add two more k:v pairs to cities dict
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
