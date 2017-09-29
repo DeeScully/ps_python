@@ -7,7 +7,7 @@ list_3 = [list_2[i] - list_1[i] for i in range(len(list_2))]
 
 print(list_3)
 
-# create a dict wtih 3 k-v pairs, loop and print each k-v pair, chk if a given val is in dict
+# create a dict with 3 k-v pairs, loop and print each k-v pair, chk if a given val is in dict
 
 char_1 = {'Name' : 'Luke', 'Power' : 'Force', 'Master' : 'Yoda'}
 
