@@ -41,21 +41,24 @@ pretty(poly_6)
 import string
 import os
 
-# get file path from user, save cwd, and change cwd to path provided
+# get file path from user, save cwd
 path = input(r'Input the complete path and filename of the file you want to analyse: ')
 orig_dir = os.getcwd()
 dir_path, fname = os.path.split(path)
 os.chdir(dir_path)
 
-# try to open file, exit if unable to
+
+# try to change cwd to path provided, exit if unable to
 try:
     fh = open(fname)
+
 except:
-    print(f'Unable to open file {fname}.  Check the name and try again.')
+    print(f'Unable to open file {fname}.  Check the path and name and try again.')
     exit()
 
 
 # use dict to accumulate word freq, norm words by making lower and rem \n and punctuations
+
 freq = {}
 for line in fh:
     line_norm = line.lower().rstrip()
@@ -64,6 +67,12 @@ for line in fh:
 
     for word in words:
         freq[word] = freq.get(word, 0) + 1
+
+
+# close file and change back to orig working dir
+fh.close()
+os.chdir(orig_dir)
+
 
 # save dict_item, loop thru dict_item to reverse k, v to v, k pairs and save to new list
 freq_tup = freq.items()
@@ -79,8 +88,3 @@ desc_rev_freq_tup = sorted(rev_freq_tup, reverse = True)
 print(f'The fifteen most frequently used words in file {fname} are:')
 for i in range(15):
     print(desc_rev_freq_tup[i][1], end = ' ')
-
-
-# close file and change back to orig working dir
-fh.close()
-os.chdir(orig_dir)
