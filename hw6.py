@@ -12,8 +12,9 @@ class Shapes:
         return perim
 
     def area(self):
-        if self.side_nums == 3 and (self.lengths[0] < self.lengths[1] + self.lengths[2]) and (self.lengths[1] < self.lengths[0] + self.lengths[2]) and (self.lengths[2] < self.lengths[0] + self.lengths[1]):
-            area = .5 * self.perim()
+        if self.side_nums == 3 and (self.side_lengths[0] < self.side_lengths[1] + self.side_lengths[2]) and (self.side_lengths[1] < self.side_lengths[0] + self.side_lengths[2]) and (self.side_lengths[2] < self.side_lengths[0] + self.side_lengths[1]):
+            half_perim = .5 * self.perim()
+            area = math.sqrt(half_perim * (half_perim - self.side_lengths[0]) * (half_perim - self.side_lengths[1]) * (half_perim - self.side_lengths[2]))
         elif self.side_nums == 4 and self.side_lengths[0] == self.side_lengths[1] and self.side_lengths[0] == self.side_lengths[2] and self.side_lengths[0] == self.side_lengths[3]:
             area = self.side_lengths[0] ** 2
         elif self.side_nums == 4 and ((self.side_lengths[0] == self.side_lengths[1] and self.side_lengths[2] == self.side_lengths[3]) or (self.side_lengths[0] == self.side_lengths[2] and self.side_lengths[1] == self.side_lengths[3])
