@@ -3,12 +3,10 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return 'Home Page'
+def hello_world():
+    greeting = 'World'
+    return f'Hello, {greeting}'
 
-@app.route('/2')
-def second_pg():
-    return '2nd page'
 
 if __name__ == '__main__':
     app.run()
