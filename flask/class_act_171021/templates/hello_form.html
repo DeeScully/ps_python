@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1>Fill this form!</h1>
+<form action="/hello" method="post">
+  Type a greeting: <input type='text' name='greet'>
+  <br>
+  Your name> <input type='text' name='name'>
+  <br>
+  <input type="submit">
+</form>
+
+{% endblock %}
