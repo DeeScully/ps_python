@@ -2,23 +2,15 @@ def scan(inp):
     inp_list = inp.split()
     list_of_tups = list()
 
+    word_ref = {'north':'direction', 'south':'direction', 'east':'direction', 'go':'verb', 'kill':'verb', 'eat':'verb', 'the':'stop', 'in':'stop', 'of':'stop', 'bear':'noun', 'princess':'noun'}
+
     for word in inp_list:
-        if word in {'north', 'south', 'east'}:
-            first_el = 'direction'
-        elif word in {'go', 'kill', 'eat'}:
-            first_el = 'verb'
-        elif word in {'the', 'in', 'of'}:
-            first_el = 'stop'
-        elif word in {'bear', 'princess'}:
-            first_el = 'noun'
-        elif word.isdigit():
-            try:
-                word = int(word)
-                first_el = 'number'
-            except ValueError:
-                return None
-        else:
-            first_el = 'error'
+        #first_el = word_ref.get(word, 'error')
+        try:
+            word = int(word)
+            first_el = 'number'
+        except ValueError:
+            first_el = word_ref.get(word, 'error')
 
         list_of_tups.append((first_el, word))
 
