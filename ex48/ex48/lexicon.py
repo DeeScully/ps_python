@@ -5,7 +5,6 @@ def scan(inp):
     word_ref = {'north':'direction', 'south':'direction', 'east':'direction', 'go':'verb', 'kill':'verb', 'eat':'verb', 'the':'stop', 'in':'stop', 'of':'stop', 'bear':'noun', 'princess':'noun'}
 
     for word in inp_list:
-        #first_el = word_ref.get(word, 'error')
         try:
             word = int(word)
             first_el = 'number'
