@@ -12,6 +12,8 @@ def about():
     if request.method == 'POST':
         global like_count
         like_count += 1
-        print(f'count is now {like_count}.')
-        count = like_count
+
+    print(f'count is now {like_count}.')
+    count = like_count
+        
     return render_template('about_me.html', new_count = count)
