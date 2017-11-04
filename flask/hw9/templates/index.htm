@@ -1,10 +1,18 @@
 {% extends 'layout.html' %}
 
+
+
 {% block content %}
-<h1>Welcome</h1>
+<h1 id='welcome'>Welcome</h1>
 <div>
     <p>
         Thanks for visiting the ugly webpage.  I hate 'programming' in HTML5, CSS3, and JS (well, not so much JS, cuz that's REAL programming) so that's the reason this page looks so ugly.  I'm not a web designer nor do I have any interest in being one.  All webpages look the same now anyway, since everyone just uses the Bootstrap framework to make their websites.
+    </p>
+</div>
+
+<div>
+    <p>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.O0VFXtKIl7NeFFX1v5hcFg4l4l&w=181&h=179&c=7&o=5&pid=1.7">
     </p>
 </div>
 <div>
@@ -13,8 +21,18 @@
     </p>
 </div>
 <div>
-    <p><form id="like_btn" action="/about" method="post">
+    <p>
+        <form id="like_btn" action="/about" method="post">
         <button type="submit" name="index_like">LIKE ME!!!</button>
-    </form></p>
+        </form>
+    </p>
+</div>
+<div>
+    <p>
+        <form id='table_pg' action="/tabs" method="post">
+            <button type="submit" name="table_pg_switch">Go to my TABLE!</button>
+        </form>
+    </p>
+
 </div>
 {% endblock %}
