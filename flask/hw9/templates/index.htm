@@ -5,7 +5,7 @@
 {% block content %}
 <h1 id='welcome'>Welcome</h1>
 <div>
-    <p>
+    <p class="thanks">
         Thanks for visiting the ugly webpage.  I hate 'programming' in HTML5, CSS3, and JS (well, not so much JS, cuz that's REAL programming) so that's the reason this page looks so ugly.  I'm not a web designer nor do I have any interest in being one.  All webpages look the same now anyway, since everyone just uses the Bootstrap framework to make their websites.
     </p>
 </div>
@@ -33,6 +33,12 @@
             <button type="submit" name="table_pg_switch">Go to my TABLE!</button>
         </form>
     </p>
-
 </div>
+{% if greeting != ' '%}
+<div>
+  <p>
+    Pssst! The encrypted msg is: {{encrypted_str}}
+  </p>
+</div>
+{% endif %}
 {% endblock %}

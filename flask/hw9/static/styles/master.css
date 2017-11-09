@@ -1,3 +1,52 @@
 body {
-    margin:248px;
+    margin:48px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: times;
+  color: red;
+  text-align: center;
+}
+
+table, th, td {
+  border: 2px solid gray;
+}
+
+.tabtab {
+  width: 40%;
+  position: relative;
+  left: 50px;
+}
+
+
+.thanks {
+  font-size: 120%;
+  color: #CDCC32;
+}
+
+
+#greeting {
+  font-family: fantasy ;
+  color: gray;
+}
+
+
+#mauve {
+  color: rgb(224, 176, 255);
+}
+
+
+#litebrown {
+  color: rgb(181, 101, 29);
+}
+
+
+#beige {
+  color: #F5F5DC;
+}
+
+
+#aboutpg {
+  background-color: #FFFACD;
 }

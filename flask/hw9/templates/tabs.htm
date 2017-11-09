@@ -10,28 +10,31 @@
 </div>
 
 <div>
-    <table>
+    <table class="tabtab">
         <tr>
             <th>Best colors on the whole world</th>
             <th>How much I love this colors</th>
         </tr>
         <tr>
-            <td>Mauve</td>
+            <td id="mauve">Mauve</td>
             <td>THIIIIIIiiis much!</td>
         </tr>
         <tr>
-            <td>Lite Brown</td>
+            <td id='litebrown'>Lite Brown</td>
             <td>Meh.  It's aite.</td>
         </tr>
         <tr>
-            <td>Beige</td>
+            <td id="beige">Beige</td>
             <td>Now WE TALKIN!!!!</td>
         </tr>
     </table>
 </div>
 
-
-
-
-
+<div>
+  <form action="/" method="post">
+    <input type="text" name="msg_to_encrypt" placeholder="What is your msg?"><br>
+    <input type="text" name="key" placeholder="What is the encryption key?">
+    <input type="submit" value="Encrypt!">
+  </form>
+</div>
 {% endblock %}
